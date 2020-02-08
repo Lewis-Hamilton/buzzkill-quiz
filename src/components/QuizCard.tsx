@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Paper from '@material-ui/core/Paper'
 import Button from '@material-ui/core/Button'
 import Grid from '@material-ui/core/Grid'
@@ -10,6 +10,7 @@ interface Props {
 	answerTwo: string
 	answerThree: string
 	answerfour: string
+	doWhatever: any
 }
 
 const QuizCard = (props: Props) => {
@@ -28,10 +29,10 @@ const QuizCard = (props: Props) => {
 						justify='space-evenly'
 						alignItems='center'>
 						<Grid item>
-							<Button>{answerOne}</Button>
+							<Button onClick={props.doWhatever}>{answerOne}</Button>
 						</Grid>
 						<Grid item>
-							<Button>{answerTwo}</Button>
+							<Button onClick={props.doWhatever}>{answerTwo}</Button>
 						</Grid>
 					</Grid>
 					<Grid
@@ -40,10 +41,10 @@ const QuizCard = (props: Props) => {
 						justify='space-evenly'
 						alignItems='center'>
 						<Grid item>
-							<Button>{answerThree}</Button>
+							<Button onClick={props.doWhatever}>{answerThree}</Button>
 						</Grid>
 						<Grid item>
-							<Button>{answerfour}</Button>
+							<Button onClick={props.doWhatever}>{answerfour}</Button>
 						</Grid>
 					</Grid>
 				</Grid>
